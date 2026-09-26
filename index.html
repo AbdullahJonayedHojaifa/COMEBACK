@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Time tracker</title>
+<title>Ledger — time tracker</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0A0A0A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,7 +112,7 @@ nav.tabs .ic{font-size:18px;}
 .search-input{margin-bottom:10px;}
 .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.stat-box{background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:12px}.stat-box .v{font-size:20px;font-weight:700}.stat-box .k{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:3px}.timeline{display:flex;flex-direction:column;gap:8px}.timeline-row{display:grid;grid-template-columns:64px 1fr auto;gap:9px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line)}.timeline-time{font-size:11px;color:var(--muted)}.timeline-main{min-width:0}.timeline-name{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.timeline-sub{font-size:11px;color:var(--muted);margin-top:2px}.pill{display:inline-block;font-size:10px;padding:3px 6px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}.notice{padding:10px;border:1px solid var(--line);background:var(--surface2);border-radius:10px;font-size:12.5px;line-height:1.5;margin-top:10px}.score-ring{font-size:34px;font-weight:800}.small-actions{display:flex;gap:8px;flex-wrap:wrap}.small-actions .btn{flex:1;min-width:130px}.toggle-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
 ::selection{background:var(--accent); color:#0A0A0A;}
-.goal-banner{border:2px solid var(--accent);background:#101400;border-radius:14px;padding:18px 16px;margin-bottom:14px;overflow:hidden;position:relative;box-shadow:0 0 24px rgba(196,241,53,.12)}
+.ledger-decor{margin:0 16px 16px;padding:20px 18px 17px;border:1px solid rgba(196,241,53,.28);border-radius:20px;background:linear-gradient(145deg,#181818 0%,#0c0c0c 62%,#111603 100%);box-shadow:0 12px 36px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.04);position:relative;overflow:hidden;text-align:center}.ledger-decor:before{content:'';position:absolute;width:240px;height:240px;right:-90px;top:-120px;background:radial-gradient(circle,rgba(196,241,53,.16),transparent 68%);animation:ledgerGlow 6s ease-in-out infinite alternate}.ledger-decor:after{content:'';position:absolute;left:12%;right:12%;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(196,241,53,.45),transparent)}.ledger-brand{position:relative;z-index:1;font-family:'Archivo Black';font-size:clamp(30px,8vw,46px);line-height:1;letter-spacing:-.055em;color:var(--text);text-shadow:0 0 22px rgba(196,241,53,.08)}.ledger-brand:before{content:'';display:block;width:42px;height:4px;margin:0 auto 10px;border-radius:99px;background:var(--accent);box-shadow:0 0 14px rgba(196,241,53,.5)}.ledger-quote{position:relative;z-index:1;max-width:680px;margin:13px auto 0;padding:0 4px;font-family:'Space Grotesk';font-size:clamp(16px,4.2vw,21px);font-weight:800;color:var(--accent);line-height:1.45;letter-spacing:-.015em;overflow-wrap:anywhere}.ledger-date{position:relative;z-index:1;margin:12px auto 0;color:#d7d7d7;font-size:clamp(12px,3vw,14px);font-weight:700;line-height:1.5;letter-spacing:.02em;overflow-wrap:anywhere}.ledger-date:before,.ledger-date:after{content:'•';color:var(--accent);margin:0 7px}.ledger-footer-name{position:relative;z-index:1;margin-top:14px;padding-top:11px;border-top:1px solid rgba(255,255,255,.08);font-family:'Archivo Black';font-size:clamp(15px,4vw,19px);letter-spacing:.18em;text-transform:uppercase;color:#777}.ledger-footer-name span{color:var(--accent)}@keyframes ledgerGlow{to{transform:translate(8%,5%) scale(1.12);opacity:.8}}.calendar-alert{border:2px solid var(--danger);background:rgba(255,90,69,.08);border-radius:14px;padding:15px;margin-bottom:14px;box-shadow:0 0 24px rgba(255,90,69,.12)}.calendar-alert.blink{animation:calendarBlink 1s steps(2,end) infinite}.calendar-alert .event-name{font-size:18px;font-weight:800;color:var(--danger)}.calendar-alert .countdown{font-family:'Archivo Black';font-size:24px;margin-top:5px;color:var(--text)}@keyframes calendarBlink{50%{opacity:.45;transform:scale(1.01)}}.calendar-list{display:flex;flex-direction:column;gap:9px}.calendar-event{background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:12px}.calendar-event .top{display:flex;justify-content:space-between;gap:10px}.calendar-event .name{font-weight:700}.calendar-event .when{font-size:11px;color:var(--muted);margin-top:4px}.calendar-event .left{font-size:12px;color:var(--accent);margin-top:7px;font-weight:700}.goal-banner{border:2px solid var(--accent);background:#101400;border-radius:14px;padding:18px 16px;margin-bottom:14px;overflow:hidden;position:relative;box-shadow:0 0 24px rgba(196,241,53,.12)}
 .goal-banner .goal-kicker{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .goal-banner .goal-text{font-family:'Space Grotesk';font-size:25px;font-weight:800;line-height:1.25;margin-top:7px;animation:goalPulse 3s ease-in-out infinite}
 @keyframes goalPulse{0%,100%{transform:translateX(0);opacity:1}50%{transform:translateX(5px);opacity:.82}}
@@ -142,11 +142,19 @@ nav.tabs .ic{font-size:18px;}
   </div>
   <div class="date" id="todayLabel"></div>
 </header>
+<section class="ledger-decor" aria-label="Ledger identity card">
+  <div class="ledger-brand">Ledger</div>
+  <div class="ledger-quote">“If everyone is against me, everyone shall lose.”</div>
+  <div class="ledger-date" id="decorDate"></div>
+  <div class="ledger-footer-name"><span>Ledger</span> · Time &amp; Focus</div>
+</section>
 
 <main>
 
   <!-- TODAY VIEW -->
   <div class="view active" id="view-today">
+
+    <div id="calendarHomeAlert"></div>
 
     <div class="goal-banner">
       <div class="goal-kicker">আজকের লক্ষ্যঃ</div>
@@ -332,6 +340,7 @@ nav.tabs .ic{font-size:18px;}
   <button data-view="categories" onclick="switchView('categories')"><span class="ic">✎</span>Categories</button>
   <button data-view="checker" onclick="switchView('checker')"><span class="ic">⏰</span>Checker</button>
   <button data-view="streak" onclick="switchView('streak')"><span class="ic">🔥</span>Streak</button>
+  <button data-view="calendar" onclick="switchView('calendar')"><span class="ic">📅</span>Calendar</button>
   <button data-view="focus" onclick="switchView('focus')"><span class="ic">◈</span>Focus</button>
 </nav>
 
@@ -358,6 +367,23 @@ nav.tabs .ic{font-size:18px;}
       <div class="stat-box"><div class="v" id="streakWeek">0/7</div><div class="k">Productive this week</div></div>
     </div>
     <div class="notice" id="streakMessage">Start today with one goal-related session.</div>
+  </div>
+</div>
+
+<div class="view" id="view-calendar">
+  <div class="card">
+    <h3>Calendar — important dates</h3>
+    <div class="field"><label>Event name</label><input type="text" id="calName" placeholder="e.g. SSC Exam — Mathematics"></div>
+    <div class="row2">
+      <div class="field"><label>Date & time</label><input type="datetime-local" id="calWhen"></div>
+      <div class="field"><label>Alert</label><select id="calAlert"><option value="all">Home + notification</option><option value="home">Home only</option><option value="notification">Notification only</option></select></div>
+    </div>
+    <button class="btn primary" style="width:100%" onclick="addCalendarEvent()">Add to Calendar</button>
+    <div class="notice">Add exams, deadlines, competitions, or any date that matters. Ledger will show the nearest event on Home with a red blinking countdown.</div>
+  </div>
+  <div class="card">
+    <h3>Your dates</h3>
+    <div class="calendar-list" id="calendarList"></div>
   </div>
 </div>
 
@@ -495,7 +521,8 @@ function load(){
     running: null, // {catId, start}
     dailyGoals: {},
     checkerHours: Array.from({length:24},()=>true),
-    streakHistory: {}
+    streakHistory: {},
+    calendarEvents: []
   };
 }
 function save(){ localStorage.setItem(DB_KEY, JSON.stringify(db)); }
@@ -522,6 +549,7 @@ function switchView(v){
   if(v==='categories') renderCategoryManage();
   if(v==='checker') renderChecker();
   if(v==='streak') renderStreak();
+  if(v==='calendar') renderCalendar();
   if(v==='focus') fillFocusCat();
 }
 
@@ -579,7 +607,10 @@ function entriesForDay(day){ return db.entries.filter(e=>e.day===day); }
 
 function renderToday(){
   const label = new Date();
-  document.getElementById('todayLabel').textContent = label.toLocaleDateString(undefined,{weekday:'short', month:'short', day:'numeric'});
+  const dateText = label.toLocaleDateString('en-US',{weekday:'long', month:'long', day:'numeric', year:'numeric'});
+  document.getElementById('todayLabel').textContent = dateText;
+  const dd=document.getElementById('decorDate'); if(dd) dd.textContent=dateText;
+  renderCalendarHomeAlert();
 
   const today = todayStr();
   const list = entriesForDay(today);
@@ -949,6 +980,29 @@ function renderStreak(){
   const m=document.getElementById('streakMessage'); if(m)m.textContent=cur?`You have ${cur} consecutive productive day${cur===1?'':'s'}. Protect the streak today.`:'Start today with one goal-related session.';
 }
 function bestProductiveStreak(){ let best=0,run=0; for(let i=364;i>=0;i--){const day=todayStr(-i); const yes=entriesForDay(day).some(e=>catById(e.catId)?.type==='productive'); if(yes){run++;best=Math.max(best,run)}else run=0;} return best; }
+// ---------- calendar ----------
+function addCalendarEvent(){
+  const name=document.getElementById('calName').value.trim(); const when=document.getElementById('calWhen').value; const alertMode=document.getElementById('calAlert').value;
+  if(!name||!when){alert('Enter an event name and date/time.');return;}
+  db.calendarEvents=db.calendarEvents||[]; db.calendarEvents.push({id:crypto.randomUUID(),name,when,alertMode,created:Date.now()}); db.calendarEvents.sort((a,b)=>new Date(a.when)-new Date(b.when)); save();
+  document.getElementById('calName').value=''; document.getElementById('calWhen').value=''; renderCalendar(); renderCalendarHomeAlert();
+}
+function deleteCalendarEvent(id){ db.calendarEvents=(db.calendarEvents||[]).filter(e=>e.id!==id); save(); renderCalendar(); renderCalendarHomeAlert(); }
+function calendarEventsSorted(){ return (db.calendarEvents||[]).slice().sort((a,b)=>new Date(a.when)-new Date(b.when)); }
+function countdownText(ms){ if(ms<=0)return 'TIME REACHED'; const s=Math.floor(ms/1000), d=Math.floor(s/86400), h=Math.floor(s%86400/3600), m=Math.floor(s%3600/60), sec=s%60; return `${d}d ${h}h ${m}m ${sec}s`; }
+function renderCalendar(){
+  const wrap=document.getElementById('calendarList'); if(!wrap)return; const arr=calendarEventsSorted();
+  if(!arr.length){wrap.innerHTML='<div class="empty">No important dates yet. Add your first deadline or exam.</div>';return;}
+  const now=Date.now(); wrap.innerHTML=arr.map(e=>{const t=new Date(e.when).getTime(); const diff=t-now; const when=new Date(e.when).toLocaleString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'}); return `<div class="calendar-event"><div class="top"><div class="name">${escapeHtml(e.name)}</div><button class="btn ghost" onclick="deleteCalendarEvent('${e.id}')">Delete</button></div><div class="when">${when}</div><div class="left">${diff>0?countdownText(diff):'TIME REACHED'}</div></div>`;}).join('');
+}
+function renderCalendarHomeAlert(){
+  const box=document.getElementById('calendarHomeAlert'); if(!box)return; const now=Date.now(); const next=calendarEventsSorted().find(e=>new Date(e.when).getTime()>now);
+  if(!next){box.innerHTML='';return;} const diff=new Date(next.when).getTime()-now; const when=new Date(next.when).toLocaleString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
+  box.innerHTML=`<div class="calendar-alert blink"><div style="font-size:11px;text-transform:uppercase;color:var(--muted);font-weight:800;letter-spacing:.08em">NEXT IMPORTANT DATE</div><div class="event-name">🚨 ${escapeHtml(next.name)}</div><div class="when" style="color:var(--muted);margin-top:4px">${when}</div><div class="countdown" id="homeCountdown">${countdownText(diff)}</div></div>`;
+}
+function updateCalendarTimers(){ renderCalendarHomeAlert(); if(document.getElementById('view-calendar').classList.contains('active')) renderCalendar(); }
+function escapeHtml(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
 // ---------- import ----------
 function doImport(){
   const raw = document.getElementById('importText').value;
@@ -1004,10 +1058,13 @@ function renderAll(){
 document.addEventListener('visibilitychange',()=>{ if(document.hidden){ if(focusState) onFocusBlur(); } else { onFocusFocus(); restoreWakeLock(); } });
 window.addEventListener('pointerdown',unlockAudio,{once:true});
 setInterval(updateClock,1000);
+setInterval(updateCalendarTimers,1000);
 updateClock();
 renderDailyGoal();
 renderChecker();
 renderStreak();
+renderCalendar();
+renderCalendarHomeAlert();
 fillCatSelects();
 fillFocusCat();
 renderAll();
